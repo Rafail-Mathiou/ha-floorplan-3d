@@ -14,7 +14,9 @@ Bug reports, ideas and pull requests are welcome.
    `docs/...`.
 2. Follow [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md). Type check, tests, ruff and the
    build must pass, and the rebuilt bundle has to be committed.
-3. Keep each pull request to one topic.
+3. Keep each pull request to one topic. Pull requests are squash-merged, so each one
+   becomes a single commit on `main` named after the pull request title. Use a prefix
+   such as `feat:`, `fix:` or `docs:` in the title.
 4. Put every new UI text into `frontend/src/i18n.ts`, in every language there. If you
    cannot translate a text, use the English one and say so in the pull request.
 5. Schema changes need a store migration and an update of
