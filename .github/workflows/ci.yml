@@ -56,12 +56,8 @@ jobs:
       - uses: home-assistant/actions/hassfest@master
 
   hacs:
-    # Non-blocking while the repository is private (HACS needs a public repo
-    # with description and topics).
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: hacs/action@main
         with:
           category: integration
-          ignore: brands
