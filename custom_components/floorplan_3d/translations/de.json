@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Grundriss 3D",
+        "description": "Legt das Dashboard „Grundriss 3D“ in der Seitenleiste an. Die Wohnung zeichnest du danach im Panel."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Grundriss 3D ist bereits eingerichtet."
+    }
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.venv/
+.env
+secrets.yaml
+.DS_Store
+Thumbs.db
+
+# Private, machine-local notes and files
+local/

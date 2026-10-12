@@ -1,0 +1,999 @@
+{
+  "version": 1,
+  "revision": 1,
+  "settings": {
+    "wall_height": 2.5,
+    "wall_thickness": 0.12,
+    "grid": 0.1,
+    "color_mode": "temperature",
+    "temp_scale": {
+      "cold": 17,
+      "ok_low": 19.5,
+      "ok_high": 22.5,
+      "hot": 25
+    },
+    "background": null
+  },
+  "rooms": [
+    {
+      "id": "r_living",
+      "name": "Living room",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          6.2,
+          0
+        ],
+        [
+          6.2,
+          5.0
+        ],
+        [
+          0,
+          5.0
+        ]
+      ],
+      "area_id": null,
+      "temp_entity": "sensor.living_room_temperature",
+      "humidity_entity": "sensor.living_room_humidity",
+      "floor_color": null
+    },
+    {
+      "id": "r_kitchen",
+      "name": "Kitchen",
+      "points": [
+        [
+          6.2,
+          0
+        ],
+        [
+          9.6,
+          0
+        ],
+        [
+          9.6,
+          3.4
+        ],
+        [
+          6.2,
+          3.4
+        ]
+      ],
+      "area_id": null,
+      "temp_entity": "sensor.kitchen_temperature",
+      "humidity_entity": null,
+      "floor_color": null
+    },
+    {
+      "id": "r_hall",
+      "name": "Hall",
+      "points": [
+        [
+          6.2,
+          3.4
+        ],
+        [
+          9.6,
+          3.4
+        ],
+        [
+          9.6,
+          6.6
+        ],
+        [
+          6.2,
+          6.6
+        ]
+      ],
+      "area_id": null,
+      "temp_entity": null,
+      "humidity_entity": null,
+      "floor_color": null
+    },
+    {
+      "id": "r_bedroom",
+      "name": "Bedroom",
+      "points": [
+        [
+          9.6,
+          0
+        ],
+        [
+          13.6,
+          0
+        ],
+        [
+          13.6,
+          4.6
+        ],
+        [
+          9.6,
+          4.6
+        ]
+      ],
+      "area_id": null,
+      "temp_entity": "sensor.bedroom_temperature",
+      "humidity_entity": "sensor.bedroom_humidity",
+      "floor_color": null
+    },
+    {
+      "id": "r_bath",
+      "name": "Bathroom",
+      "points": [
+        [
+          9.6,
+          4.6
+        ],
+        [
+          13.6,
+          4.6
+        ],
+        [
+          13.6,
+          6.6
+        ],
+        [
+          9.6,
+          6.6
+        ]
+      ],
+      "area_id": null,
+      "temp_entity": "sensor.bathroom_temperature",
+      "humidity_entity": "sensor.bathroom_humidity",
+      "floor_color": null
+    },
+    {
+      "id": "r_office",
+      "name": "Office",
+      "points": [
+        [
+          0,
+          5.0
+        ],
+        [
+          4.2,
+          5.0
+        ],
+        [
+          4.2,
+          8.2
+        ],
+        [
+          0,
+          8.2
+        ]
+      ],
+      "area_id": null,
+      "temp_entity": "climate.office",
+      "humidity_entity": null,
+      "floor_color": null
+    },
+    {
+      "id": "r_wc",
+      "name": "WC",
+      "points": [
+        [
+          4.2,
+          5.0
+        ],
+        [
+          6.2,
+          5.0
+        ],
+        [
+          6.2,
+          6.6
+        ],
+        [
+          4.2,
+          6.6
+        ]
+      ],
+      "area_id": null,
+      "temp_entity": "sensor.wc_temperature",
+      "humidity_entity": null,
+      "floor_color": null
+    }
+  ],
+  "openings": [
+    {
+      "id": "o_front",
+      "type": "door",
+      "room_ids": [
+        "r_hall"
+      ],
+      "wall": {
+        "a": [
+          7.4,
+          6.6
+        ],
+        "b": [
+          8.4,
+          6.6
+        ]
+      },
+      "entity_id": "binary_sensor.front_door",
+      "exterior": true,
+      "hinge": "left"
+    },
+    {
+      "id": "o_living_hall",
+      "type": "opening",
+      "room_ids": [
+        "r_living",
+        "r_hall"
+      ],
+      "wall": {
+        "a": [
+          6.2,
+          3.6
+        ],
+        "b": [
+          6.2,
+          4.7
+        ]
+      },
+      "entity_id": null,
+      "exterior": false,
+      "hinge": "left"
+    },
+    {
+      "id": "o_kitchen",
+      "type": "door",
+      "room_ids": [
+        "r_kitchen",
+        "r_hall"
+      ],
+      "wall": {
+        "a": [
+          7.2,
+          3.4
+        ],
+        "b": [
+          8.1,
+          3.4
+        ]
+      },
+      "entity_id": null,
+      "exterior": false,
+      "hinge": "left"
+    },
+    {
+      "id": "o_bedroom",
+      "type": "door",
+      "room_ids": [
+        "r_bedroom",
+        "r_hall"
+      ],
+      "wall": {
+        "a": [
+          9.6,
+          3.6
+        ],
+        "b": [
+          9.6,
+          4.5
+        ]
+      },
+      "entity_id": "binary_sensor.bedroom_door",
+      "exterior": false,
+      "hinge": "left"
+    },
+    {
+      "id": "o_bath",
+      "type": "door",
+      "room_ids": [
+        "r_bath",
+        "r_hall"
+      ],
+      "wall": {
+        "a": [
+          9.6,
+          5.3
+        ],
+        "b": [
+          9.6,
+          6.1
+        ]
+      },
+      "entity_id": null,
+      "exterior": false,
+      "hinge": "right"
+    },
+    {
+      "id": "o_wc",
+      "type": "door",
+      "room_ids": [
+        "r_wc",
+        "r_hall"
+      ],
+      "wall": {
+        "a": [
+          6.2,
+          5.5
+        ],
+        "b": [
+          6.2,
+          6.3
+        ]
+      },
+      "entity_id": null,
+      "exterior": false,
+      "hinge": "left"
+    },
+    {
+      "id": "o_office",
+      "type": "door",
+      "room_ids": [
+        "r_office",
+        "r_living"
+      ],
+      "wall": {
+        "a": [
+          1.2,
+          5.0
+        ],
+        "b": [
+          2.1,
+          5.0
+        ]
+      },
+      "entity_id": null,
+      "exterior": false,
+      "hinge": "left"
+    },
+    {
+      "id": "o_w_living_side",
+      "type": "window",
+      "room_ids": [
+        "r_living"
+      ],
+      "wall": {
+        "a": [
+          0,
+          1.0
+        ],
+        "b": [
+          0,
+          2.6
+        ]
+      },
+      "entity_id": "binary_sensor.living_room_window",
+      "exterior": true,
+      "hinge": "left"
+    },
+    {
+      "id": "o_w_living_top",
+      "type": "window",
+      "room_ids": [
+        "r_living"
+      ],
+      "wall": {
+        "a": [
+          1.8,
+          0
+        ],
+        "b": [
+          4.2,
+          0
+        ]
+      },
+      "entity_id": null,
+      "exterior": true,
+      "hinge": "left"
+    },
+    {
+      "id": "o_w_kitchen",
+      "type": "window",
+      "room_ids": [
+        "r_kitchen"
+      ],
+      "wall": {
+        "a": [
+          7.0,
+          0
+        ],
+        "b": [
+          8.4,
+          0
+        ]
+      },
+      "entity_id": "binary_sensor.kitchen_window",
+      "exterior": true,
+      "hinge": "left"
+    },
+    {
+      "id": "o_w_bedroom",
+      "type": "window",
+      "room_ids": [
+        "r_bedroom"
+      ],
+      "wall": {
+        "a": [
+          13.6,
+          1.4
+        ],
+        "b": [
+          13.6,
+          2.8
+        ]
+      },
+      "entity_id": "binary_sensor.bedroom_window",
+      "exterior": true,
+      "hinge": "left"
+    },
+    {
+      "id": "o_w_bath",
+      "type": "window",
+      "room_ids": [
+        "r_bath"
+      ],
+      "wall": {
+        "a": [
+          11.0,
+          6.6
+        ],
+        "b": [
+          11.9,
+          6.6
+        ]
+      },
+      "entity_id": null,
+      "exterior": true,
+      "hinge": "left"
+    },
+    {
+      "id": "o_w_office",
+      "type": "window",
+      "room_ids": [
+        "r_office"
+      ],
+      "wall": {
+        "a": [
+          0,
+          6.0
+        ],
+        "b": [
+          0,
+          7.2
+        ]
+      },
+      "entity_id": "binary_sensor.office_window",
+      "exterior": true,
+      "hinge": "left"
+    },
+    {
+      "id": "o_w_office_bottom",
+      "type": "window",
+      "room_ids": [
+        "r_office"
+      ],
+      "wall": {
+        "a": [
+          1.4,
+          8.2
+        ],
+        "b": [
+          2.8,
+          8.2
+        ]
+      },
+      "entity_id": null,
+      "exterior": true,
+      "hinge": "left"
+    }
+  ],
+  "items": [
+    {
+      "id": "i_rad_living",
+      "entity_id": "climate.living_room",
+      "kind": "auto",
+      "pos": [
+        0.15,
+        1.8
+      ],
+      "rotation": 0,
+      "height": 0.2,
+      "room_id": "r_living",
+      "label": null
+    },
+    {
+      "id": "i_rad_office",
+      "entity_id": "climate.office",
+      "kind": "auto",
+      "pos": [
+        0.15,
+        6.6
+      ],
+      "rotation": 0,
+      "height": 0.2,
+      "room_id": "r_office",
+      "label": null
+    },
+    {
+      "id": "i_rad_bedroom",
+      "entity_id": "climate.bedroom",
+      "kind": "auto",
+      "pos": [
+        12.4,
+        4.45
+      ],
+      "rotation": 0,
+      "height": 0.2,
+      "room_id": "r_bedroom",
+      "label": null
+    },
+    {
+      "id": "i_rad_bath",
+      "entity_id": "climate.bathroom",
+      "kind": "auto",
+      "pos": [
+        13.45,
+        5.6
+      ],
+      "rotation": 0,
+      "height": 0.6,
+      "room_id": "r_bath",
+      "label": "Towel radiator"
+    },
+    {
+      "id": "i_floor_lamp",
+      "entity_id": "light.floor_lamp",
+      "kind": "auto",
+      "pos": [
+        0.5,
+        4.5
+      ],
+      "rotation": 0,
+      "height": 1.6,
+      "room_id": "r_living",
+      "label": null
+    },
+    {
+      "id": "i_kitchen_light",
+      "entity_id": "light.kitchen_pendant",
+      "kind": "auto",
+      "pos": [
+        7.9,
+        2.2
+      ],
+      "rotation": 0,
+      "height": 2.0,
+      "room_id": "r_kitchen",
+      "label": null
+    },
+    {
+      "id": "i_bedside",
+      "entity_id": "light.bedside_lamp",
+      "kind": "auto",
+      "pos": [
+        12.85,
+        0.35
+      ],
+      "rotation": 0,
+      "height": 0.6,
+      "room_id": "r_bedroom",
+      "label": null
+    },
+    {
+      "id": "i_tv",
+      "entity_id": "media_player.living_room_tv",
+      "kind": "tv",
+      "pos": [
+        6.05,
+        2.5
+      ],
+      "rotation": 0,
+      "height": 1.0,
+      "room_id": "r_living",
+      "label": null
+    },
+    {
+      "id": "i_speaker",
+      "entity_id": "media_player.kitchen_speaker",
+      "kind": "auto",
+      "pos": [
+        9.35,
+        1.2
+      ],
+      "rotation": 0,
+      "height": 0.9,
+      "room_id": "r_kitchen",
+      "label": null
+    },
+    {
+      "id": "i_vacuum",
+      "entity_id": "vacuum.robot_vacuum",
+      "kind": "auto",
+      "pos": [
+        4.6,
+        4.3
+      ],
+      "rotation": 0,
+      "height": 0,
+      "room_id": "r_living",
+      "label": null
+    },
+    {
+      "id": "i_motion",
+      "entity_id": "binary_sensor.hall_motion",
+      "kind": "auto",
+      "pos": [
+        8.9,
+        4.2
+      ],
+      "rotation": 0,
+      "height": 2.4,
+      "room_id": "r_hall",
+      "label": null
+    },
+    {
+      "id": "i_co2",
+      "entity_id": "sensor.bedroom_co2",
+      "kind": "auto",
+      "pos": [
+        13.35,
+        3.6
+      ],
+      "rotation": 0,
+      "height": 1.0,
+      "room_id": "r_bedroom",
+      "label": "Air quality"
+    }
+  ],
+  "furniture": [
+    {
+      "id": "f_sofa",
+      "type": "sofa",
+      "pos": [
+        2.9,
+        2.5
+      ],
+      "size": [
+        2.4,
+        0.95
+      ],
+      "rotation": -90,
+      "label": null
+    },
+    {
+      "id": "f_rug",
+      "type": "rug",
+      "pos": [
+        4.1,
+        2.5
+      ],
+      "size": [
+        1.8,
+        2.4
+      ],
+      "rotation": 0,
+      "label": null
+    },
+    {
+      "id": "f_coffee",
+      "type": "coffee_table",
+      "pos": [
+        4.1,
+        2.5
+      ],
+      "size": [
+        1.1,
+        0.6
+      ],
+      "rotation": 90,
+      "label": null
+    },
+    {
+      "id": "f_tv_board",
+      "type": "tv_board",
+      "pos": [
+        5.92,
+        2.5
+      ],
+      "size": [
+        1.8,
+        0.45
+      ],
+      "rotation": 90,
+      "label": null
+    },
+    {
+      "id": "f_armchair",
+      "type": "armchair",
+      "pos": [
+        4.3,
+        0.85
+      ],
+      "size": [
+        0.85,
+        0.85
+      ],
+      "rotation": 180,
+      "label": null
+    },
+    {
+      "id": "f_plant",
+      "type": "plant",
+      "pos": [
+        0.45,
+        0.45
+      ],
+      "size": [
+        0.45,
+        0.45
+      ],
+      "rotation": 0,
+      "label": null
+    },
+    {
+      "id": "f_shelf_living",
+      "type": "shelf",
+      "pos": [
+        2.6,
+        4.75
+      ],
+      "size": [
+        1.6,
+        0.35
+      ],
+      "rotation": 180,
+      "label": null
+    },
+    {
+      "id": "f_kitchen",
+      "type": "kitchen",
+      "pos": [
+        7.4,
+        0.33
+      ],
+      "size": [
+        2.4,
+        0.6
+      ],
+      "rotation": 0,
+      "label": null
+    },
+    {
+      "id": "f_fridge",
+      "type": "fridge",
+      "pos": [
+        9.2,
+        0.36
+      ],
+      "size": [
+        0.6,
+        0.65
+      ],
+      "rotation": 0,
+      "label": null
+    },
+    {
+      "id": "f_table",
+      "type": "table",
+      "pos": [
+        7.9,
+        2.2
+      ],
+      "size": [
+        1.2,
+        0.8
+      ],
+      "rotation": 0,
+      "label": null
+    },
+    {
+      "id": "f_chair_1",
+      "type": "chair",
+      "pos": [
+        7.55,
+        1.6
+      ],
+      "size": [
+        0.45,
+        0.5
+      ],
+      "rotation": 0,
+      "label": null
+    },
+    {
+      "id": "f_chair_2",
+      "type": "chair",
+      "pos": [
+        8.25,
+        1.6
+      ],
+      "size": [
+        0.45,
+        0.5
+      ],
+      "rotation": 0,
+      "label": null
+    },
+    {
+      "id": "f_chair_3",
+      "type": "chair",
+      "pos": [
+        7.55,
+        2.8
+      ],
+      "size": [
+        0.45,
+        0.5
+      ],
+      "rotation": 180,
+      "label": null
+    },
+    {
+      "id": "f_chair_4",
+      "type": "chair",
+      "pos": [
+        8.25,
+        2.8
+      ],
+      "size": [
+        0.45,
+        0.5
+      ],
+      "rotation": 180,
+      "label": null
+    },
+    {
+      "id": "f_bed",
+      "type": "bed",
+      "pos": [
+        11.6,
+        1.1
+      ],
+      "size": [
+        1.8,
+        2.0
+      ],
+      "rotation": 0,
+      "label": null
+    },
+    {
+      "id": "f_wardrobe",
+      "type": "wardrobe",
+      "pos": [
+        9.95,
+        1.4
+      ],
+      "size": [
+        2.0,
+        0.6
+      ],
+      "rotation": -90,
+      "label": null
+    },
+    {
+      "id": "f_bathtub",
+      "type": "bathtub",
+      "pos": [
+        12.65,
+        6.15
+      ],
+      "size": [
+        1.7,
+        0.75
+      ],
+      "rotation": 180,
+      "label": null
+    },
+    {
+      "id": "f_sink_bath",
+      "type": "sink",
+      "pos": [
+        10.5,
+        4.85
+      ],
+      "size": [
+        0.6,
+        0.45
+      ],
+      "rotation": 0,
+      "label": null
+    },
+    {
+      "id": "f_toilet_bath",
+      "type": "toilet",
+      "pos": [
+        11.4,
+        4.95
+      ],
+      "size": [
+        0.38,
+        0.65
+      ],
+      "rotation": 0,
+      "label": null
+    },
+    {
+      "id": "f_desk",
+      "type": "desk",
+      "pos": [
+        2.1,
+        7.8
+      ],
+      "size": [
+        1.6,
+        0.7
+      ],
+      "rotation": 180,
+      "label": null
+    },
+    {
+      "id": "f_office_chair",
+      "type": "chair",
+      "pos": [
+        2.1,
+        7.15
+      ],
+      "size": [
+        0.5,
+        0.5
+      ],
+      "rotation": 180,
+      "label": null
+    },
+    {
+      "id": "f_shelf_office",
+      "type": "shelf",
+      "pos": [
+        4.0,
+        6.6
+      ],
+      "size": [
+        1.2,
+        0.35
+      ],
+      "rotation": 90,
+      "label": null
+    },
+    {
+      "id": "f_toilet",
+      "type": "toilet",
+      "pos": [
+        4.55,
+        5.8
+      ],
+      "size": [
+        0.38,
+        0.65
+      ],
+      "rotation": -90,
+      "label": null
+    },
+    {
+      "id": "f_sink_wc",
+      "type": "sink",
+      "pos": [
+        5.3,
+        5.25
+      ],
+      "size": [
+        0.5,
+        0.4
+      ],
+      "rotation": 0,
+      "label": null
+    },
+    {
+      "id": "f_plant_hall",
+      "type": "plant",
+      "pos": [
+        9.2,
+        6.2
+      ],
+      "size": [
+        0.45,
+        0.45
+      ],
+      "rotation": 0,
+      "label": null
+    }
+  ]
+}

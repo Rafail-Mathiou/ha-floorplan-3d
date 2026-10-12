@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Floorplan 3D",
+        "description": "Adds the Floorplan 3D dashboard to the sidebar. Draw your home in the panel afterwards."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Floorplan 3D is already set up."
+    }
+  }
+}
